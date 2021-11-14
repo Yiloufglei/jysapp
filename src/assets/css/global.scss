@@ -1,0 +1,483 @@
+$main-blue: #4e82f3;
+$main-font-c: #233b55;
+$c-999: #999999;
+// $buy: #00b464;
+$buy: #03ad8f;
+$flat:#c8cfd5;
+// $sell: #fa4d56;
+$sell: #d14b64;
+
+$Gold: #fd9e00;
+$Green: #138000;
+
+::v-deep {
+    .van-dropdown-menu__item:active{
+        opacity: 1;
+    }
+    .van-dropdown-item__option--active ,.van-dropdown-item__icon,.van-tab--active ,.van-dropdown-menu__title--active{
+        color: $main-blue !important;
+    }
+    .van-tabs__nav--line{
+        // padding-bottom: 0;
+    }
+    .van-tabs__line{
+        background-color:  $main-blue;
+    }
+}
+
+.ep-hd {
+    &:empty::before {
+        content: "--";
+    }
+}
+
+@mixin ep-hd {
+    @extend .ep-hd;
+}
+::v-deep .van-tabs{
+    .van-tab--active{
+        color: $main-blue;
+    }
+    .van-tabs__line{
+        background-color: $main-blue;
+    }
+}
+.van-swipe-cell__right{
+    .van-button{
+        height: 100%;
+    }
+}
+.van-myfield{
+    padding: 15px 0;
+    input {
+        &::placeholder {
+            color: $c-999;
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+}
+.van-dialog .van-dialog__content{
+    padding: 20px;
+}
+.van-dialog__confirm, .van-dialog__confirm:active{
+    color: $main-blue;
+}
+.van-overlay{
+    background-color: rgba(0,0,0,.2) !important;
+}
+::v-deep.van-dropdown-menu{
+    .van-dropdown-menu__title--active,.van-dropdown-item__option--active,.van-dropdown-item__icon{
+        color: $main-blue;
+    }
+    .van-dropdown-menu__title::after{
+        border-color: transparent transparent $c-999 $c-999;
+    }
+    .van-dropdown-menu__title--active::after {
+        border-color: transparent transparent $main-blue $main-blue;
+    }
+}
+
+.no-data {
+    &:empty::before {
+        content: "暂无数据";
+        display: block;
+        width: 100%;
+        height: 90px;
+        line-height: 150px;
+        text-align: center;
+        background: url("~@/assets/imgs/no-data.svg") no-repeat;
+        background-size: 98px 64px;
+        background-position: 50% 64px;
+        padding: 70px 0;
+        color: #8a96a3;
+        font-weight: 500;
+    }
+}
+
+.bg-sell {
+    background: $sell !important;
+}
+.bg_b {
+    background: $main-blue !important;
+}
+.bg-buy {
+    background: $buy !important;
+}
+.bj-flat{
+    background-color: $flat !important;
+}
+.sell-color {
+    color: $sell !important;
+}
+
+.buy-color {
+    color: $buy !important;
+}
+
+.up-color {
+    color: $buy !important;
+}
+
+.down-color {
+    color: $sell !important;
+}
+
+.upper {
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+.text_es {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+// 单行省略号
+@mixin ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+// 多行省略号
+@mixin multi_ellipsis($line: 1) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+    overflow: hidden;
+}
+
+.flex {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.no-wrap {
+    flex-wrap: nowrap;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.row-center {
+    display: flex;
+    justify-content: center;
+}
+
+.col-center {
+    display: flex;
+    align-items: center;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexC_S {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fzboid {
+    font-weight: 500;
+}
+
+.t_r {
+    text-align: right;
+}
+
+.t_l {
+    text-align: left;
+}
+
+.t_c {
+    text-align: center;
+}
+
+.color_c {
+    color: $c-999;
+}
+
+.color_g {
+    color: $Gold;
+}
+
+.color_gr {
+    color: $Green;
+}
+
+.color_b {
+    color: $main-blue;
+}
+
+.border_b_c {
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.border_c {
+    border: 1px solid #f5f5f5;
+}
+
+.clear-both {
+    &::after {
+        content: ".";
+        display: block;
+        height: 0;
+        visibility: hidden;
+        clear: both;
+    }
+}
+#flash_point_b
+{
+    pointer-events: none;
+    position: absolute;
+    display: none;
+    font-size:6px;
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    border-radius: 8px;
+}
+#flash_point_b:before {
+    content: '';
+    display:block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    opacity: .7;
+    background-color: #fff;
+    animation: scale 1.5s infinite cubic-bezier(0,0,.49,1.02);
+    animation-delay: 100ms;
+}
+#flash_point_w
+{
+    pointer-events: none;
+    position: absolute;
+    display: none;
+    font-size:6px;
+    height: 8px;
+    width: 8px;
+    background: #4e82f3;
+    border-radius: 8px;
+}
+#flash_point_w:before {
+    content: '';
+    display:block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    opacity: .7;
+    background-color: #4e82f3;
+    animation: scale 1.5s infinite cubic-bezier(0,0,.49,1.02);
+    animation-delay: 100ms;
+}
+@keyframes scale{
+    0%{transform:scale(1)}
+    50%,75%{transform:scale(2.5)}
+    78%,100%{opacity:0}
+}
+//底部fixed区域
+.fixedSeizeSeat {
+    height: 90px;
+}
+
+.fixed_content_btm {
+    position: fixed;
+    background: #ffffff;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    padding: 10px 16px 40px;
+}
+
+.listLoading {
+    text-align: center;
+    min-height: 40px;
+    line-height: 40px;
+    color: $c-999;
+}
+
+.iconshaixuan {
+    font-size: 20px;
+}
+.van-mybutton{
+    border-radius: 6px;
+    height: 40px;
+    line-height: 1;
+}
+.van-myNbButton{
+    border-radius: 6px;
+    height: 40px;
+    border: none;
+    line-height: 1;
+}
+// 公用列表样式css；currencyAccount文件
+.publicListStyle {
+    //   height: 82px;
+    padding: 16px 0;
+    font-size: 12px;
+
+    div {
+        p {
+            margin-bottom: 10px;
+        }
+    }
+
+    .list_c {
+        text-align: center;
+    }
+
+    .list_r {
+        text-align: right;
+    }
+}
+
+//资产底部图标操作栏
+.actionBar {
+    height: 80px;
+    background: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    padding: 6px 0;
+    .actionBa_list {
+        flex: 1;
+        height: 100%;
+        position: relative;
+        input {
+            width: 100%;
+            text-align: center;
+            color: $main-blue;
+        }
+        ul {
+            position: absolute;
+            bottom: 44px;
+            width: 100%;
+            background: #fff;
+
+            li {
+                line-height: 50px;
+                text-align: center;
+            }
+        }
+
+        img {
+            height: 40px;
+            width: 40px;
+        }
+
+        &:last-child {
+            //   border: none;
+        }
+    }
+}
+
+//信息详情列表
+.publicMsg li {
+    line-height: 35px;
+    font-size: 14px;
+
+    .iconfont {
+        font-size: 22px;
+        width: 30px;
+        text-align: right;
+    }
+
+    .text_c {
+        text-align: center;
+    }
+}
+
+//页面间隔背景
+.interval_bj {
+    height: 10px;
+    background: #f9f9f9;
+}
+
+.leftSlipList {
+    overflow-x: hidden;
+
+    /*隐藏ul x轴的滚动条*/
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    .eftSlip_li {
+        position: relative;
+        transform: translateX(0);
+        transition: all 0.3s;
+
+        /*滑动效果更生动*/
+        .del {
+            position: absolute;
+            top: 0;
+            right: -1px;
+            z-index: 30;
+            width: 60px;
+            height: 100%;
+            text-align: center;
+            color: #fff;
+            background-color: #ff5b45;
+            transform: translateX(60px);
+            /*默认x轴位移60px，使其隐藏*/
+        }
+    }
+
+    .move {
+        transform: translateX(-60px);
+        /*滑动后x轴位移-60px,使其可见*/
+    }
+}
+
+// v-loading 样式
+.elrelative {
+    position: relative;
+    .divabsolute {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.1);
+        z-index: 999;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .loading_box{
+            width: 100px;
+            height: 100px;
+            border-radius: 8px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+            .iconfont{
+                font-size: 30px;
+                margin-bottom: 10px;
+                @keyframes loading-rotate  {
+                    0% {transform: rotate(0deg)}
+                    100% {transform: rotate(360deg)}
+                }
+                animation: loading-rotate 2s linear infinite;
+            }
+        }
+    }
+}

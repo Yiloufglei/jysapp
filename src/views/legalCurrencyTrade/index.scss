@@ -1,0 +1,176 @@
+.publicBuySellList {
+	.buySellList {
+		padding: 20px 0;
+
+		.buySellList_t {
+			height: 40px;
+
+			.buySellList_t_l {
+				height: 100%;
+				.nameImg {
+					margin-right: 10px;
+					img {
+						width: 33px;
+						height: 33px;
+						border-radius: 50%;
+					}
+					.iconfont{
+						font-size: 24px;
+					}
+				}
+
+				.namedata {
+					.namedata_t {
+						font-size: 14px;
+						line-height: 17px;
+						margin-bottom: 2px;
+					}
+
+					.namedata_b {
+						font-size: 10px;
+
+						.namedataVal {
+							margin: 0 4px;
+						}
+
+						.namedataIcon {
+							margin-right: 4px;
+						}
+					}
+				}
+			}
+			.onlineName{
+				.namedata .namedata_t {
+					font-size: 14px;
+				}
+			}
+			.buySellList_t_r {
+				text-align: right;
+
+				.fzboid {
+					font-size: 16px;
+					line-height: 20px;
+					margin-bottom: 4px;
+				}
+
+				div {
+					font-size: 11px;
+					line-height: 16px;
+				}
+			}
+		}
+
+		.buySellList_b {
+			height: 34px;
+
+			.buySellList_b_l {
+				font-size: 11px;
+				line-height: 16px;
+
+				.buySellList_b_l_val {
+					margin-top: 2px;
+				}
+			}
+
+			.buySellList_b_r {
+				display: flex;
+				align-items: flex-end;
+
+				.iconfont {
+					margin-right: 10px;
+					font-size: 15px;
+				}
+
+				button {
+					width: 65px;
+					height: 25px;
+					background: $main-blue;
+					border-radius: 4px;
+					border: none;
+					color: #FFFFFF;
+					font-size: 12px;
+				}
+			}
+		}
+	}
+}
+.publicOrderTradeStyle{
+	padding: 0 16px;
+	.publicOrderTrade_top {
+		height: 92px;
+		padding-bottom: 15px;
+	
+		.top_l ,.top_r{
+			.top_l_t {
+				font-size: 26px;
+				line-height: 37px;
+				padding: 10px 0;
+			}
+	
+			.top_l_b {
+				font-size: 14px;
+				line-height: 20px;
+	
+				span {
+					margin-left: 5px;
+				}
+			}
+		}
+	
+		.iconfont {
+			font-size: 70px;
+		}
+	}
+	.purchaseType {
+		padding: 6px 0;
+	}
+	.interval_bj {
+		margin: 0 -16px 0 -16px;
+	}
+	.purchaseMsg {
+		padding: 10px 0;
+	
+		.purchaseMsg_top {
+			height: 40px;
+	
+			span {
+				font-size: 14px;
+			}
+	
+			.iconfont {
+				font-size: 24px;
+				margin-right: 6px;
+			}
+		}
+	
+	}
+}
+
+//取消交易或者订单的样式
+.cancelSecondaryDialog_body{
+	padding: 30px 0 5px;
+	font-size: 14px;
+	line-height: 20px;
+	.title_text{
+		margin-bottom: 10px;
+	}
+	.cancelConfirm_body{
+		.left{
+			width: 100px;
+		}
+	}
+	.check_body{
+		margin-top: 20px;
+		height: 20px;
+		font-size: 12px;
+		input{
+			width: 14px;
+			height: 14px;
+			margin-right: 10px;
+			margin-top: 2px;
+		}
+	}
+}
+.right-icon{
+	width: 60px;
+}

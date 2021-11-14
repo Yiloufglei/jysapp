@@ -1,0 +1,28 @@
+.zoomIn-enter,
+.zoomIn-leave-to {
+  opacity: 0;
+}
+.zoomIn-enter-active,
+.zoomIn-leave-active {
+  transition: opacity 0.2s;
+}
+// 底部弹出
+.slideInUp-enter,
+.slideInUp-leave-to {
+  opacity: 0;
+  transform: translateY(100%);
+}
+.slideInUp-enter-active,
+.slideInUp-leave-active {
+  transition: opacity 0.3s, transform 0.3s;
+}
+// 左侧弹出
+.slideInRight-enter,
+.slideInRight-leave-to {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.slideInRight-enter-active,
+.slideInRight-leave-active {
+  transition: opacity 0.2s, transform 0.2s;
+}

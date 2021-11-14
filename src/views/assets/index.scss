@@ -1,0 +1,56 @@
+.selectCurrency-top {
+	.title {
+		line-height: 60px;
+	}
+	.select_li {
+		line-height: 46px;
+	}
+}
+.explain{
+	li{
+		font-size: 12px;
+		line-height: 17px;
+		padding-bottom: 8px;
+	}
+}
+.selectContent{
+	.clickBtn {
+		width: 92px;
+		height: 28px;
+		border-radius: 15px;
+		margin-right: 10px;
+	}
+	.active {
+		background: #F8FBFF;
+		color: $main-blue;
+	}
+	
+}
+.account_body_style {
+    padding-bottom: 80px;
+	.account_body_style_top {
+		padding: 0 16px;
+		.title_text {
+			line-height: 56px;
+			height: 56px;
+			font-size: 20px;
+			color: $main-blue;
+		}
+	}
+	.list_body{
+	}
+	.account_body_style_title {
+		padding: 0 16px;
+		height: 52px;
+		font-size: 16px;
+		span {
+			&:last-child {
+				font-size: 14px;
+			}
+		}
+		img {
+			width: 20px;
+			height: 20px;
+		}
+	}
+}

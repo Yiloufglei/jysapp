@@ -1,0 +1,51 @@
+.bind_public_style{
+	height: 100%;
+	background-color: #F9F9F9;
+	padding: 0 16px;
+	.bind_public_title{
+		padding: 20px 14px;
+		p{
+			line-height: 20px;
+			span{
+				font-size: 12px;
+			}
+			i{
+				color: green;
+				margin-right: 3px;
+			}
+		}
+	}
+	.bind_public_content{
+		background-color: #FFFFFF;
+		padding: 5px 14px 20px;
+		border-radius: 12px;
+		.upload_body{
+			padding-bottom: 15px;
+			.upload_title{
+				line-height: 50px;
+			}
+			.upload_content{
+				.img_box{
+					width: 150px;
+					height: 100px;
+					background: #F9FBFE;
+					p{
+						font-size: 12px;
+					}
+					.iconfont{
+						font-size: 38px;
+						display: initial;
+					}
+					.upload_img{
+						width: 100%;
+						height: 100%;
+                        object-fit: contain;
+					}
+				}
+			}
+		}
+		.btn-content{
+			margin-top: 20px;
+		}
+	}
+}
